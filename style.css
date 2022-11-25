@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1em 1.5em;
+    position: fixed;
+    top: 0;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    z-index: 2;
+    right: 0;
+    height: 100vh;
+    top: 0;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font: normal 15pt arial;
+    margin: 1em 0;
+    display: none;
+}
+
+.nav-item:hover {
+    transform: scale(1.2);
+}
+
+.logo {
+    font: bold 20pt arial;
+    color: white;
+    justify-self: flex-end;
+    text-transform: uppercase;
+}
+
+.fi {
+    color: white;
+    font: normal 20pt arial;
+    cursor: pointer;
+}
+
+#close-menu {
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1em;
+    transform: rotate(45deg);
+}
+
+.active {
+    display: flex;
+    animation: menu .5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+.nav-active{
+    display: flex;
+    animation: nav .75s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes nav {
+    from{
+        transform:translateX(250px);
+        opacity: 0;
+    }
+}
+@keyframes menu {
+    from {
+        opacity: 0;
+        transform: translate(100%);
+    }
+}
+
+@media (max-width:640px) {
+    .menu {
+        width: 100%;
+    }
+
+    .section .title {
+        font-size: 4em;
+    }
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font: bold 7em arial;
+    color: white;
+}
+
+.title:hover {
+    transform: scale(1.1);
+}
+
+#home {
+    background: #000428;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #004e92, #000428);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #004e92, #000428);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#about {
+    background: #42275a;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #000428, #42275a);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #000428, #42275a);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#products {
+    background: #141E30;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #42275a, #141E30);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #42275a, #141E30);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#services {
+    background: #2C3E50;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #141E30, #2C3E50);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #141E30, #2C3E50);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#contacts {
+    background: #2196f3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2C3E50, #2196f3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2C3E50, #2196f3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
